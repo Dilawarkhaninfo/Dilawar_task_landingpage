@@ -147,3 +147,4 @@ SOLUTION.md
 CLAUDE.md
 .claude/
 .playwright-mcp/
+/build
