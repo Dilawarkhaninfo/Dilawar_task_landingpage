@@ -12,7 +12,7 @@ const Footer = () => {
     return (
     <div className=" ">
             <div className='bg-[#050025] mx-auto bg-gradient-to-t from-[#FC466B]/20 via-[#b50ea2]/20 to-[#050030]/20 mt-32 '>
-            <footer className="container mx-auto ">
+            <footer className="container mx-auto px-4 sm:px-8 lg:px-20">
                 <div className="mx-auto max-w-screen-xl space-y-8  pt-16 pb-8  lg:space-y-16 ">
                     <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
                         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3">
