@@ -60,8 +60,8 @@ const ContactUs = () => {
 
   return (
     <div id="contact" className="container mx-auto px-4 sm:px-8 lg:px-20 py-16">
-      <div className="mx-auto flex max-w-7xl flex-col gap-8 lg:flex-row lg:items-stretch">
-        <section className="flex-grow rounded-2xl bg-gradient-to-l from-[#110D2E]/40 to-[#fc466a4a]/10 p-6 shadow-md sm:p-10 lg:p-14">
+      <div className="mx-auto flex max-w-7xl flex-col gap-8">
+        <section className="rounded-2xl bg-gradient-to-l from-[#110D2E]/40 to-[#fc466a4a]/10 p-6 shadow-md sm:p-10 lg:p-14">
           <div className="mb-8 flex flex-col items-center text-center">
             <h2 className="text-2xl font-semibold capitalize text-white">Drop Us Your Message</h2>
             <p className="mt-2 text-gray-400">
@@ -108,20 +108,19 @@ const ContactUs = () => {
           </form>
         </section>
 
-        <aside className="formBorder-gradient flex flex-col items-center justify-center border px-6 py-4 lg:w-[26%]">
-          {CONTACT_DETAILS.map(({ id, label, value, Icon }, index) => (
-            <div key={id} className="flex w-full flex-col items-center">
-              <div className="flex flex-col items-center justify-center py-4 text-center">
-                <Icon size={44} className="my-4 text-blue-700" />
-                <div className="py-1 text-lg text-white">{label}</div>
-                <div className="text-lg text-gray-400 break-all">{value}</div>
-              </div>
-              {index < CONTACT_DETAILS.length - 1 && (
-                <hr className="h-[1px] w-32 border-0 bg-gradient-to-r from-[#FC466B] to-[#3F5EFB]" />
-              )}
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          {CONTACT_DETAILS.map(({ id, label, value, Icon }) => (
+            <div
+              key={id}
+              className="formBorder-gradient flex flex-col items-center border bg-[#110D2E]/40 px-6 py-8 text-center transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#3F5EFB]/20"
+            >
+              <Icon size={40} className="mb-4 text-blue-600" />
+              <div className="text-lg font-semibold text-white">{label}</div>
+              <hr className="my-3 h-[1px] w-16 border-0 bg-gradient-to-r from-[#FC466B] to-[#3F5EFB]" />
+              <div className="break-all text-gray-400">{value}</div>
             </div>
           ))}
-        </aside>
+        </div>
       </div>
     </div>
   );
